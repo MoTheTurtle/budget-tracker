@@ -1,26 +1,29 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class BudgetApp {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        BudgetCategory groceries = new BudgetCategory("Groceries", 500,401);
-             /*   while(scan.hasNextLine()) {
-            String category = scan.nextLine();
+        //BudgetCategory groceries = new BudgetCategory("Groceries", 500,401);
+            List<BudgetCategory> categories = new ArrayList<>(); 
 
+            while(scan.hasNextLine()) {
+            String category = scan.nextLine();
             double limit = scan.nextDouble();
             double spent = scan.nextDouble();
+
+            categories.add(new BudgetCategory(category,limit, spent));
 
             // Consume \n after spent input 
             if(scan.hasNextLine()) scan.nextLine();
 
             String limitString = String.format("$%.2f", limit);
             String spentString = String.format("$%.2f", spent);
-            System.out.println("The budget limit for " + category + " was: " + limitString + 
-                               " but the actual spend was " + spentString);
+            
     }
-        */                    
-          System.out.println(groceries);
+    System.out.println(categories);
+         
     }
 
     /**
