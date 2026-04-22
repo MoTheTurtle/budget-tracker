@@ -7,7 +7,6 @@ public class BudgetApp {
         Scanner scan = new Scanner(System.in);
         //BudgetCategory groceries = new BudgetCategory("Groceries", 500,401);
             List<BudgetCategory> categories = new ArrayList<>();
-            List<BudgetCategoryDiff> 
 
             while(scan.hasNextLine()) {
             String category = scan.nextLine();
@@ -24,7 +23,9 @@ public class BudgetApp {
             
     }
     System.out.println(categories);
-         
+    for(BudgetCategory c:categories){
+        System.out.println(c.getName());
+    }
     }
 
     /**
