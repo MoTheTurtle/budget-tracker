@@ -11,4 +11,12 @@ public class BudgetCategory {
     public String toString(){
         return "Category = " +name + "Limit = " + limit +"spent = "+ spent;
     }
+    public BudgetCategoryDiff(String name, Double limit, double spent){
+        this.name=name;
+        double this.Diff=limit-spent; 
+        return this.name, this.Diff; 
+    }
+    public int compareTo(BudgetCategory other){
+        if()
+    }
 }
