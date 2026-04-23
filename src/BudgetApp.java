@@ -29,8 +29,12 @@ public class BudgetApp {
         System.out.println(c.getName());
     }
     int diff = budgetDifference(categories);
-    System.out.println("Total difference = "+ diff);
+    System.out.println("total difference = "+ diff);
+    double average = budgetAverage(categories);
+    System.out.printf("Average Differnece = %.2f", average);
+
     }
+    
 
     /**
      * Returns overall how much over/under budget a person is given a list of their
@@ -52,5 +56,13 @@ public class BudgetApp {
 
         return (int) total;
     }
-    
+    public static double budgetAverage(List<BudgetCategory> categories){
+        double total =0;
+        
+        for(BudgetCategory x :categories){
+            total+=(x.getSpent()-x.getLimit());
+
+        }
+        return total/categories.size();
+    }
 }
